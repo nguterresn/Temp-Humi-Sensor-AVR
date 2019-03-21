@@ -1,4 +1,9 @@
-#define F_CPU 1000000UL			/* Define CPU Frequency e.g. here 8MHz */
+/*
+Nuno Guterres Nogueira 
+The fun of making something work
+*/
+
+#define F_CPU 1000000UL			
 
 #include <avr/io.h>
 #include <stdlib.h>
@@ -93,9 +98,6 @@ int main(void)
 		D_Temp=Receive_data();	/* store next eight bit in D_Temp */
 		CheckSum=Receive_data();/* store next eight bit in CheckSum */
 
-		//USART_Transmit(itoa(I_RH,data,10));
-		USART_Transmit("ola \n");
-
 
 		if ((I_RH + D_RH + I_Temp + D_Temp) == CheckSum)
 		{
@@ -114,9 +116,6 @@ int main(void)
 			lcd_print(data);
 			lcddata(0xDF);
 			lcd_print("C");
-
-			USART_Transmit("hum:  ");
-			USART_Transmit(itoa(I_RH,data,10));
 
 		}
 
