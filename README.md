@@ -9,5 +9,12 @@ This project was programmed to avr using usbasp in MacOS Mojave.
 - avr_compiler.h 
 - Makefile must be editted depending on your hardware 
 
+### Test
 
+USART is enable for tests! 
+- Baudrate = 4800
 
+This fuction lets you receive on serial port *data:
+```sh
+void USART_Transmit(uint8_t *data )
+```
