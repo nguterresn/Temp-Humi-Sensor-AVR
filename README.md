@@ -9,6 +9,15 @@ This project was programmed to avr using usbasp in MacOS Mojave.
 - avr_compiler.h 
 - Makefile must be editted depending on your hardware 
 
+In the terminal, where the files are saved in, first,
+```sh
+make 
+```
+Then last,
+```sh
+make program
+```
+
 ### Test
 
 USART is enable for tests! 
